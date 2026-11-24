@@ -1,0 +1,164 @@
+[
+  {
+    "id": "1",
+    "key": "PLAT-101",
+    "title": "Rotate the database credentials",
+    "status": "todo",
+    "assignee": "Marta Vidal"
+  },
+  {
+    "id": "2",
+    "key": "PLAT-102",
+    "title": "Add a readiness probe to the API",
+    "status": "in_progress",
+    "assignee": "Jordi Puig"
+  },
+  {
+    "id": "3",
+    "key": "PLAT-103",
+    "title": "Alert on p95 latency above 800 ms",
+    "status": "done",
+    "assignee": "Laia Ferrer"
+  },
+  {
+    "id": "4",
+    "key": "PLAT-104",
+    "title": "Migrate the sessions table to keyset pagination",
+    "status": "todo",
+    "assignee": "Pau Serra"
+  },
+  {
+    "id": "5",
+    "key": "PLAT-105",
+    "title": "Document the restore runbook",
+    "status": "in_progress",
+    "assignee": "Marta Vidal"
+  },
+  {
+    "id": "6",
+    "key": "PLAT-106",
+    "title": "Remove static AWS keys from CI",
+    "status": "done",
+    "assignee": "Arnau Soler"
+  },
+  {
+    "id": "7",
+    "key": "DASH-201",
+    "title": "Show issue throughput per team",
+    "status": "todo",
+    "assignee": "Laia Ferrer"
+  },
+  {
+    "id": "8",
+    "key": "DASH-202",
+    "title": "Fix the theme flash on first load",
+    "status": "in_progress",
+    "assignee": "Jordi Puig"
+  },
+  {
+    "id": "9",
+    "key": "DASH-203",
+    "title": "Filter goals by team and quarter",
+    "status": "todo",
+    "assignee": "Núria Camps"
+  },
+  {
+    "id": "10",
+    "key": "DASH-204",
+    "title": "Cache the team list for five minutes",
+    "status": "done",
+    "assignee": "Pau Serra"
+  },
+  {
+    "id": "11",
+    "key": "DASH-205",
+    "title": "Render the initiative timeline on the server",
+    "status": "todo",
+    "assignee": "Arnau Soler"
+  },
+  {
+    "id": "12",
+    "key": "DASH-206",
+    "title": "Keyboard navigation in the issue table",
+    "status": "in_progress",
+    "assignee": "Núria Camps"
+  },
+  {
+    "id": "13",
+    "key": "INT-301",
+    "title": "Retry Jira requests that return 429",
+    "status": "done",
+    "assignee": "Marta Vidal"
+  },
+  {
+    "id": "14",
+    "key": "INT-302",
+    "title": "Verify Slack request signatures",
+    "status": "in_progress",
+    "assignee": "Laia Ferrer"
+  },
+  {
+    "id": "15",
+    "key": "INT-303",
+    "title": "Deduplicate GitHub webhook deliveries",
+    "status": "todo",
+    "assignee": "Jordi Puig"
+  },
+  {
+    "id": "16",
+    "key": "INT-304",
+    "title": "Validate rows read from the planning sheet",
+    "status": "todo",
+    "assignee": "Pau Serra"
+  },
+  {
+    "id": "17",
+    "key": "INT-305",
+    "title": "Read goals through the GraphQL gateway",
+    "status": "done",
+    "assignee": "Núria Camps"
+  },
+  {
+    "id": "18",
+    "key": "INT-306",
+    "title": "Post the weekly summary to the team channel",
+    "status": "in_progress",
+    "assignee": "Arnau Soler"
+  },
+  {
+    "id": "19",
+    "key": "DATA-401",
+    "title": "Load Jira issues incrementally",
+    "status": "in_progress",
+    "assignee": "Marta Vidal"
+  },
+  {
+    "id": "20",
+    "key": "DATA-402",
+    "title": "Add freshness checks to the sources",
+    "status": "todo",
+    "assignee": "Laia Ferrer"
+  },
+  {
+    "id": "21",
+    "key": "DATA-403",
+    "title": "Model weekly throughput as a mart",
+    "status": "done",
+    "assignee": "Jordi Puig"
+  },
+  {
+    "id": "22",
+    "key": "DATA-404",
+    "title": "Expose governed metrics to the dashboard",
+    "status": "todo",
+    "assignee": "Núria Camps"
+  },
+  {
+    "id": "23",
+    "key": "AI-501",
+    "title": "Classify new issues by work type",
+    "status": "in_progress",
+    "assignee": "Pau Serra"
+  },
+  { "id": "24", "key": "AI-502", "title": "Track token cost per feature", "status": "todo", "assignee": "Arnau Soler" }
+]

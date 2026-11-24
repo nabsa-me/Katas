@@ -1,0 +1,234 @@
+:root {
+  --color-text: #1d2a33;
+  --color-muted: #5b6b76;
+  --color-bg: #ffffff;
+  --color-surface: #f4f6f7;
+  --color-border: #d5dde2;
+  --color-accent: #0b6e4f;
+  --color-problem: #b00020;
+  --color-focus: #f2a900;
+  --radius: 6px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--font);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  height: 100%;
+}
+
+nav {
+  overflow: auto;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+}
+
+nav h1 {
+  margin: 0 0 var(--space-4);
+  font-size: 1.2rem;
+}
+
+nav h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li a {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  color: inherit;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background: var(--color-border);
+}
+
+nav li a[aria-current='page'] {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+main {
+  overflow: auto;
+}
+
+.home {
+  padding: var(--space-5);
+  max-width: 60ch;
+}
+
+/* Exercise layout: problem and solution side by side */
+.exercise {
+  padding: var(--space-5);
+}
+
+.exercise h2 {
+  margin: 0 0 var(--space-2);
+}
+
+.instructions {
+  margin: 0 0 var(--space-4);
+  max-width: 80ch;
+  color: var(--color-muted);
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-4);
+}
+
+.card {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.card h3,
+.card h4 {
+  margin: 0;
+}
+
+.tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tag.problem {
+  color: var(--color-problem);
+}
+
+.tag.solution {
+  color: var(--color-accent);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: end;
+}
+
+.controls label {
+  display: grid;
+  gap: var(--space-1);
+  font-size: 0.85rem;
+}
+
+input,
+select {
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+button {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+button[aria-pressed='true'] {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0 var(--space-2);
+  border-radius: 999px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.list {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.list li {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.muted {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  nav {
+    max-height: 30vh;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+}

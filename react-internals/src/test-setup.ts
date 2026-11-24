@@ -1,0 +1,10 @@
+import '@testing-library/jest-dom/vitest';
+import { cleanup } from '@testing-library/react';
+import { afterEach } from 'vitest';
+import { renderLog } from './lib/render-log';
+
+// Vitest runs without globals, so Testing Library cannot register its automatic cleanup.
+afterEach(() => {
+  cleanup();
+  renderLog.reset();
+});
