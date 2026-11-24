@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
-    "test": "vitest run"
+    "test": "vitest run",
+    "bot": "node --env-file-if-exists=.env --import tsx src/exercises/hardening-a-poc/main.ts",
+    "demo": "tsx src/exercises/hardening-a-poc/demo.ts",
+    "demo:problem": "tsx src/exercises/hardening-a-poc/demo.ts problem"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
