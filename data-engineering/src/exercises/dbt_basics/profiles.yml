@@ -1,0 +1,14 @@
+# The standard libpq variables, defaulting to the kata's local Postgres (docker-compose.yml).
+# Custom variables must not start with `DBT_`: dbt reserves that prefix for its own settings.
+dbt_basics:
+  target: local
+  outputs:
+    local:
+      type: postgres
+      host: "{{ env_var('PGHOST', 'localhost') }}"
+      port: "{{ env_var('PGPORT', '5810') | as_number }}"
+      user: "{{ env_var('PGUSER', 'postgres') }}"
+      password: "{{ env_var('PGPASSWORD', 'postgres') }}"
+      dbname: "{{ env_var('PGDATABASE', 'postgres') }}"
+      schema: analytics
+      threads: 4

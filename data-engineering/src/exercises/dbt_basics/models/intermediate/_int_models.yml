@@ -1,0 +1,15 @@
+models:
+  - name: int_resolved_issues_by_team
+    description: Resolved issues with the owning team and the week they count in.
+    columns:
+      - name: issue_key
+        data_tests: [unique, not_null]
+      - name: team_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('teams')
+                field: team_id
+      - name: week_start
+        data_tests: [not_null]

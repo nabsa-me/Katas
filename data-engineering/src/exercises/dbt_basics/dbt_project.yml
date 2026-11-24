@@ -1,0 +1,31 @@
+name: dbt_basics
+version: '1.0.0'
+profile: dbt_basics
+
+model-paths: ['models']
+seed-paths: ['seeds']
+test-paths: ['tests']
+
+flags:
+  # No usage events sent from a kata, and no `.user.yml` written next to the profile.
+  send_anonymous_usage_stats: false
+
+# Each layer gets its own schema (`analytics_staging`, `analytics_marts`, …): consumers are granted the marts only.
+seeds:
+  dbt_basics:
+    +schema: seeds
+
+models:
+  dbt_basics:
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+    marts:
+      +schema: marts
+      +materialized: table
+      # The model's description becomes the table's comment, so the definition travels with the data.
+      +persist_docs:
+        relation: true

@@ -1,0 +1,21 @@
+seeds:
+  - name: teams
+    description: Teams that own Jira projects. Small, slowly changing reference data kept in the repository.
+    columns:
+      - name: team_id
+        data_tests: [unique, not_null]
+      - name: team_name
+        data_tests: [not_null]
+
+  - name: team_projects
+    description: Which team owns each Jira project. A project belongs to exactly one team.
+    columns:
+      - name: project_key
+        data_tests: [unique, not_null]
+      - name: team_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('teams')
+                field: team_id

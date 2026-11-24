@@ -1,0 +1,15 @@
+sources:
+  - name: jira
+    description: Raw Jira issues, landed by the incremental extractor (one row per issue, latest version).
+    schema: raw
+    config:
+      # Freshness of the load itself: when the extractor last wrote a row.
+      loaded_at_field: loaded_at
+      freshness:
+        warn_after: { count: 24, period: hour }
+        error_after: { count: 48, period: hour }
+    tables:
+      - name: jira_issues
+        columns:
+          - name: issue_key
+            data_tests: [unique, not_null]

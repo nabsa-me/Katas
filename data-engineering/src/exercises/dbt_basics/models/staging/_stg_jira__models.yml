@@ -1,0 +1,25 @@
+models:
+  - name: stg_jira__issues
+    description: Jira issues, one row each, cleaned from the raw source.
+    columns:
+      - name: issue_key
+        data_tests: [unique, not_null]
+      - name: project_key
+        data_tests:
+          - not_null
+          # Every issue must belong to a project that some team owns, or its work disappears from team metrics.
+          - relationships:
+              arguments:
+                to: ref('team_projects')
+                field: project_key
+      - name: status_category
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['new', 'indeterminate', 'done']
+      - name: resolved_at
+        data_tests:
+          # Throughput counts resolution dates: a done issue without one would silently not count.
+          - not_null:
+              config:
+                where: "status_category = 'done'"

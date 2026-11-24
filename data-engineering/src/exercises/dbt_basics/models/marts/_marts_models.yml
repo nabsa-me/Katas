@@ -1,0 +1,28 @@
+models:
+  - name: fct_team_weekly_throughput
+    description: >
+      Issue throughput per team per week: issues whose status category is done, counted in the ISO week (Monday,
+      UTC) of their resolution date, for the team that owns the project. The only definition of this metric.
+    config:
+      # Consumers rely on these names and types: a change that breaks them fails the build instead of the dashboard.
+      contract:
+        enforced: true
+    columns:
+      - name: team_id
+        data_type: text
+        constraints:
+          - type: not_null
+      - name: team_name
+        data_type: text
+        constraints:
+          - type: not_null
+      - name: week_start
+        data_type: date
+        constraints:
+          - type: not_null
+      - name: resolved_issues
+        data_type: integer
+        constraints:
+          - type: not_null
+          - type: check
+            expression: 'resolved_issues > 0'
