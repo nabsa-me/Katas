@@ -1,0 +1,32 @@
+{
+  "name": "nextjs-ssr-hydration",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 5803",
+    "build": "next build",
+    "start": "next start --port 5803",
+    "check": "next typegen && tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "description": "Solved katas on server rendering and hydration with the Next.js App Router",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.1"
+  }
+}

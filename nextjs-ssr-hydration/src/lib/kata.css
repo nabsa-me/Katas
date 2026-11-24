@@ -1,0 +1,118 @@
+/* Shared by every root layout. The theme lives in CSS variables: `.dark` anywhere switches them. */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1d2a33;
+  --color-muted: #5b6b76;
+  --color-surface: #f4f6f7;
+  --color-border: #d5dde2;
+  --color-accent: #0b6e4f;
+  --color-problem: #b00020;
+  --color-focus: #f2a900;
+  --radius: 6px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  color-scheme: light;
+  font-family: var(--font);
+  line-height: 1.5;
+}
+
+.dark {
+  --color-bg: #10171d;
+  --color-text: #e6edf1;
+  --color-muted: #9aabb6;
+  --color-surface: #1b252d;
+  --color-border: #2f3d47;
+  --color-accent: #4cc39a;
+  --color-problem: #ff6b81;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+button,
+select {
+  font: inherit;
+}
+
+button {
+  padding: 4px var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: inherit;
+  cursor: pointer;
+}
+
+button[aria-pressed='true'] {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* The themed area of a page, for variants that put the theme class on an element instead of <html>. */
+.theme-root {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.page {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+}
+
+.tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tag.problem {
+  color: var(--color-problem);
+}
+
+.tag.solution {
+  color: var(--color-accent);
+}
+
+.card {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.muted {
+  color: var(--color-muted);
+}
