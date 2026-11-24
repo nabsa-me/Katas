@@ -6,7 +6,8 @@
   "scripts": {
     "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
     "test": "vitest run",
-    "validate": "tsx src/validate.ts"
+    "validate": "tsx src/validate.ts",
+    "validate:dockerfile": "tsx src/validate.ts dockerfile"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",

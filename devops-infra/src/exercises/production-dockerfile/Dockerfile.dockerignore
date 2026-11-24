@@ -1,0 +1,13 @@
+# Ignore file for ./Dockerfile only (BuildKit reads <Dockerfile name>.dockerignore next to the
+# Dockerfile before the context's .dockerignore). Dockerfile.problem has none on purpose.
+# Only what `npm ci` and `next build` need is sent to the builder: a smaller context, fewer cache
+# misses, and no local secrets or host-built binaries in any layer.
+node_modules
+.next
+next-env.d.ts
+*.tsbuildinfo
+npm-debug.log*
+.env
+.env.*
+.git
+*.md

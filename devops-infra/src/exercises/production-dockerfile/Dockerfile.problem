@@ -1,0 +1,9 @@
+# Flawed on purpose: it works, and it is how an image often looks before review.
+#   docker build -f src/exercises/production-dockerfile/Dockerfile.problem -t devops-infra-app:problem src/exercises/production-dockerfile/app
+FROM node:latest
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]

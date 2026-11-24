@@ -21,5 +21,7 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  // The sample app has its own package.json and tsconfig; `next build` type-checks it inside Docker.
+  "exclude": ["src/exercises/production-dockerfile/app"]
 }
