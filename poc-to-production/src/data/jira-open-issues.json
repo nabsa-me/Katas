@@ -1,0 +1,192 @@
+[
+  {
+    "id": "10101",
+    "key": "PLAT-101",
+    "fields": {
+      "summary": "Rotate the database credentials",
+      "assignee": {
+        "displayName": "Marta Vidal"
+      },
+      "priority": {
+        "name": "High"
+      },
+      "status": {
+        "name": "In Progress"
+      }
+    }
+  },
+  {
+    "id": "10102",
+    "key": "PLAT-102",
+    "fields": {
+      "summary": "Add a readiness probe to the API",
+      "assignee": {
+        "displayName": "Jordi Puig"
+      },
+      "priority": {
+        "name": "Medium"
+      },
+      "status": {
+        "name": "To Do"
+      }
+    }
+  },
+  {
+    "id": "10103",
+    "key": "PLAT-103",
+    "fields": {
+      "summary": "Search fails when the query contains < or &",
+      "assignee": {
+        "displayName": "Laia Ferrer"
+      },
+      "priority": {
+        "name": "High"
+      },
+      "status": {
+        "name": "In Progress"
+      }
+    }
+  },
+  {
+    "id": "10104",
+    "key": "PLAT-104",
+    "fields": {
+      "summary": "Stop the deploy notice from pinging <!channel>",
+      "assignee": {
+        "displayName": "Marta Vidal"
+      },
+      "priority": {
+        "name": "Medium"
+      },
+      "status": {
+        "name": "To Do"
+      }
+    }
+  },
+  {
+    "id": "10105",
+    "key": "PLAT-105",
+    "fields": {
+      "summary": "Document the restore runbook",
+      "assignee": {
+        "displayName": "Marta Vidal"
+      },
+      "priority": {
+        "name": "Low"
+      },
+      "status": {
+        "name": "To Do"
+      }
+    }
+  },
+  {
+    "id": "10106",
+    "key": "PLAT-106",
+    "fields": {
+      "summary": "Alert on p95 latency above 800 ms",
+      "assignee": {
+        "displayName": "Jordi Puig"
+      },
+      "priority": {
+        "name": "High"
+      },
+      "status": {
+        "name": "In Progress"
+      }
+    }
+  },
+  {
+    "id": "10107",
+    "key": "PLAT-107",
+    "fields": {
+      "summary": "Move the nightly export to keyset pagination",
+      "assignee": {
+        "displayName": "Marta Vidal"
+      },
+      "priority": {
+        "name": "Medium"
+      },
+      "status": {
+        "name": "To Do"
+      }
+    }
+  },
+  {
+    "id": "10108",
+    "key": "PLAT-108",
+    "fields": {
+      "summary": "Pin the base image by digest",
+      "assignee": {
+        "displayName": "Laia Ferrer"
+      },
+      "priority": {
+        "name": "Low"
+      },
+      "status": {
+        "name": "To Do"
+      }
+    }
+  },
+  {
+    "id": "10109",
+    "key": "PLAT-109",
+    "fields": {
+      "summary": "Add retries to the billing webhook consumer",
+      "assignee": {
+        "displayName": "Marta Vidal"
+      },
+      "priority": {
+        "name": "Medium"
+      },
+      "status": {
+        "name": "In Review"
+      }
+    }
+  },
+  {
+    "id": "10110",
+    "key": "PLAT-110",
+    "fields": {
+      "summary": "Remove the unused feature flags",
+      "assignee": {
+        "displayName": "Jordi Puig"
+      },
+      "priority": {
+        "name": "Low"
+      },
+      "status": {
+        "name": "To Do"
+      }
+    }
+  },
+  {
+    "id": "10111",
+    "key": "PLAT-111",
+    "fields": {
+      "summary": "Review the IAM role trust policy",
+      "assignee": {
+        "displayName": "Marta Vidal"
+      },
+      "priority": {
+        "name": "High"
+      },
+      "status": {
+        "name": "To Do"
+      }
+    }
+  },
+  {
+    "id": "10112",
+    "key": "PLAT-112",
+    "fields": {
+      "summary": "Triage the flaky end-to-end test",
+      "assignee": null,
+      "priority": {
+        "name": "Medium"
+      },
+      "status": {
+        "name": "To Do"
+      }
+    }
+  }
+]
