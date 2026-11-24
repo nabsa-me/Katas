@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
-    "test": "vitest run"
+    "test": "vitest run",
+    "start": "node --env-file-if-exists=.env --import tsx --import ./src/exercises/node-observability/instrument.ts src/exercises/node-observability/main.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
