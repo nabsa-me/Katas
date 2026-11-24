@@ -1,0 +1,26 @@
+{
+  "name": "postgres-rds",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/pg": "^8.23.1",
+    "dbmate": "^2.38.2",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "@aws-sdk/rds-signer": "^3.1176.0",
+    "pg": "^8.23.1"
+  },
+  "description": "Solved katas on PostgreSQL for applications on Amazon RDS",
+  "engines": {
+    "node": ">=22.12"
+  }
+}
