@@ -1,0 +1,799 @@
+[
+  {
+    "id": "10001",
+    "key": "PAY-101",
+    "fields": {
+      "summary": "Retry failed card payments",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-alex",
+        "displayName": "Alex Rivera"
+      },
+      "created": "2026-10-20T09:15:00.000+0000",
+      "updated": "2026-10-28T16:40:00.000+0000",
+      "resolutiondate": "2026-10-28T16:40:00.000+0000"
+    }
+  },
+  {
+    "id": "10002",
+    "key": "PAY-102",
+    "fields": {
+      "summary": "Show refund status on the order page",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-sam",
+        "displayName": "Sam Okafor"
+      },
+      "created": "2026-10-21T11:02:00.000+0100",
+      "updated": "2026-10-30T12:20:00.000+0100",
+      "resolutiondate": "2026-10-30T12:20:00.000+0100"
+    }
+  },
+  {
+    "id": "10003",
+    "key": "PAY-103",
+    "fields": {
+      "summary": "Fix rounding in currency conversion",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-alex",
+        "displayName": "Alex Rivera"
+      },
+      "created": "2026-10-27T08:45:00.000+0000",
+      "updated": "2026-11-03T14:05:00.000+0000",
+      "resolutiondate": "2026-11-03T14:05:00.000+0000"
+    }
+  },
+  {
+    "id": "10004",
+    "key": "PAY-104",
+    "fields": {
+      "summary": "Rotate the payment provider webhook secret",
+      "status": {
+        "name": "Closed",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Task"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-sam",
+        "displayName": "Sam Okafor"
+      },
+      "created": "2026-10-28T13:30:00.000+0000",
+      "updated": "2026-11-05T09:50:00.000+0000",
+      "resolutiondate": "2026-11-05T09:50:00.000+0000"
+    }
+  },
+  {
+    "id": "10005",
+    "key": "PAY-105",
+    "fields": {
+      "summary": "Add idempotency keys to payouts",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-kim",
+        "displayName": "Kim Laurent"
+      },
+      "created": "2026-11-02T10:00:00.000+0100",
+      "updated": "2026-11-10T18:25:00.000+0100",
+      "resolutiondate": "2026-11-10T18:25:00.000+0100"
+    }
+  },
+  {
+    "id": "10006",
+    "key": "PAY-106",
+    "fields": {
+      "summary": "Handle duplicate webhook deliveries",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-alex",
+        "displayName": "Alex Rivera"
+      },
+      "created": "2026-11-03T11:10:00.000+0000",
+      "updated": "2026-11-23T08:30:00.000+0000",
+      "resolutiondate": "2026-11-12T15:45:00.000+0000"
+    }
+  },
+  {
+    "id": "10007",
+    "key": "PAY-107",
+    "fields": {
+      "summary": "Export settlements as CSV",
+      "status": {
+        "name": "In Progress",
+        "statusCategory": {
+          "key": "indeterminate"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-kim",
+        "displayName": "Kim Laurent"
+      },
+      "created": "2026-11-09T10:00:00.000+0000",
+      "updated": "2026-11-20T12:00:00.000+0000",
+      "resolutiondate": null
+    }
+  },
+  {
+    "id": "10008",
+    "key": "PAY-108",
+    "fields": {
+      "summary": "Validate IBAN checksums",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-sam",
+        "displayName": "Sam Okafor"
+      },
+      "created": "2026-11-10T10:35:00.000+0100",
+      "updated": "2026-11-17T11:10:00.000+0100",
+      "resolutiondate": "2026-11-17T11:10:00.000+0100"
+    }
+  },
+  {
+    "id": "10009",
+    "key": "PAY-109",
+    "fields": {
+      "summary": "Paginate the transactions API",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-alex",
+        "displayName": "Alex Rivera"
+      },
+      "created": "2026-11-11T14:20:00.000+0000",
+      "updated": "2026-11-18T16:00:00.000+0000",
+      "resolutiondate": "2026-11-18T16:00:00.000+0000"
+    }
+  },
+  {
+    "id": "10010",
+    "key": "PAY-110",
+    "fields": {
+      "summary": "Alert on payout failures",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Task"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": {
+        "accountId": "account-kim",
+        "displayName": "Kim Laurent"
+      },
+      "created": "2026-11-12T08:05:00.000+0000",
+      "updated": "2026-11-20T09:40:00.000+0000",
+      "resolutiondate": "2026-11-20T09:40:00.000+0000"
+    }
+  },
+  {
+    "id": "10011",
+    "key": "PAY-111",
+    "fields": {
+      "summary": "Support partial captures",
+      "status": {
+        "name": "To Do",
+        "statusCategory": {
+          "key": "new"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PAY"
+      },
+      "assignee": null,
+      "created": "2026-11-19T16:00:00.000+0100",
+      "updated": "2026-11-19T16:00:00.000+0100",
+      "resolutiondate": null
+    }
+  },
+  {
+    "id": "10012",
+    "key": "WAL-201",
+    "fields": {
+      "summary": "Store wallet balances in minor units",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "WAL"
+      },
+      "assignee": {
+        "accountId": "account-noor",
+        "displayName": "Noor Haddad"
+      },
+      "created": "2026-10-19T09:30:00.000+0000",
+      "updated": "2026-10-29T13:15:00.000+0000",
+      "resolutiondate": "2026-10-29T13:15:00.000+0000"
+    }
+  },
+  {
+    "id": "10013",
+    "key": "WAL-202",
+    "fields": {
+      "summary": "Top up from saved cards",
+      "status": {
+        "name": "In Review",
+        "statusCategory": {
+          "key": "indeterminate"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "WAL"
+      },
+      "assignee": {
+        "accountId": "account-noor",
+        "displayName": "Noor Haddad"
+      },
+      "created": "2026-11-04T10:45:00.000+0000",
+      "updated": "2026-11-21T09:05:00.000+0000",
+      "resolutiondate": null
+    }
+  },
+  {
+    "id": "10014",
+    "key": "WAL-203",
+    "fields": {
+      "summary": "Freeze wallets flagged by risk checks",
+      "status": {
+        "name": "Closed",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Task"
+      },
+      "project": {
+        "key": "WAL"
+      },
+      "assignee": {
+        "accountId": "account-sam",
+        "displayName": "Sam Okafor"
+      },
+      "created": "2026-11-05T13:00:00.000+0100",
+      "updated": "2026-11-11T11:30:00.000+0100",
+      "resolutiondate": "2026-11-11T11:30:00.000+0100"
+    }
+  },
+  {
+    "id": "10015",
+    "key": "WAL-204",
+    "fields": {
+      "summary": "Show pending top-ups",
+      "status": {
+        "name": "Closed",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "project": {
+        "key": "WAL"
+      },
+      "assignee": {
+        "accountId": "account-noor",
+        "displayName": "Noor Haddad"
+      },
+      "created": "2026-11-09T09:10:00.000+0000",
+      "updated": "2026-11-19T14:50:00.000+0000",
+      "resolutiondate": "2026-11-19T14:50:00.000+0000"
+    }
+  },
+  {
+    "id": "10016",
+    "key": "PLT-301",
+    "fields": {
+      "summary": "Upgrade Postgres minor version",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Task"
+      },
+      "project": {
+        "key": "PLT"
+      },
+      "assignee": {
+        "accountId": "account-lena",
+        "displayName": "Lena Brandt"
+      },
+      "created": "2026-10-19T08:00:00.000+0000",
+      "updated": "2026-10-27T19:30:00.000+0000",
+      "resolutiondate": "2026-10-27T19:30:00.000+0000"
+    }
+  },
+  {
+    "id": "10017",
+    "key": "PLT-302",
+    "fields": {
+      "summary": "Add a readiness probe to the gateway",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PLT"
+      },
+      "assignee": {
+        "accountId": "account-tomas",
+        "displayName": "Tomás Ruiz"
+      },
+      "created": "2026-10-22T10:20:00.000+0100",
+      "updated": "2026-11-02T12:45:00.000+0100",
+      "resolutiondate": "2026-11-02T12:45:00.000+0100"
+    }
+  },
+  {
+    "id": "10018",
+    "key": "PLT-303",
+    "fields": {
+      "summary": "Rotate database credentials automatically",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PLT"
+      },
+      "assignee": {
+        "accountId": "account-lena",
+        "displayName": "Lena Brandt"
+      },
+      "created": "2026-10-26T10:10:00.000+0000",
+      "updated": "2026-11-06T15:30:00.000+0000",
+      "resolutiondate": "2026-11-06T15:30:00.000+0000"
+    }
+  },
+  {
+    "id": "10019",
+    "key": "PLT-304",
+    "fields": {
+      "summary": "Fix a flaky deploy pipeline step",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "project": {
+        "key": "PLT"
+      },
+      "assignee": {
+        "accountId": "account-tomas",
+        "displayName": "Tomás Ruiz"
+      },
+      "created": "2026-11-02T13:00:00.000+0000",
+      "updated": "2026-11-04T10:20:00.000+0000",
+      "resolutiondate": "2026-11-04T10:20:00.000+0000"
+    }
+  },
+  {
+    "id": "10020",
+    "key": "PLT-305",
+    "fields": {
+      "summary": "Cache build dependencies",
+      "status": {
+        "name": "Closed",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Task"
+      },
+      "project": {
+        "key": "PLT"
+      },
+      "assignee": {
+        "accountId": "account-lena",
+        "displayName": "Lena Brandt"
+      },
+      "created": "2026-11-05T10:40:00.000+0100",
+      "updated": "2026-11-13T13:10:00.000+0100",
+      "resolutiondate": "2026-11-13T13:10:00.000+0100"
+    }
+  },
+  {
+    "id": "10021",
+    "key": "PLT-306",
+    "fields": {
+      "summary": "Alarm on p95 latency per route",
+      "status": {
+        "name": "In Progress",
+        "statusCategory": {
+          "key": "indeterminate"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PLT"
+      },
+      "assignee": {
+        "accountId": "account-tomas",
+        "displayName": "Tomás Ruiz"
+      },
+      "created": "2026-11-10T11:00:00.000+0000",
+      "updated": "2026-11-22T10:00:00.000+0000",
+      "resolutiondate": null
+    }
+  },
+  {
+    "id": "10022",
+    "key": "PLT-307",
+    "fields": {
+      "summary": "Remove unused feature flags",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Task"
+      },
+      "project": {
+        "key": "PLT"
+      },
+      "assignee": {
+        "accountId": "account-lena",
+        "displayName": "Lena Brandt"
+      },
+      "created": "2026-11-12T14:30:00.000+0000",
+      "updated": "2026-11-16T09:15:00.000+0000",
+      "resolutiondate": "2026-11-16T09:15:00.000+0000"
+    }
+  },
+  {
+    "id": "10023",
+    "key": "PLT-308",
+    "fields": {
+      "summary": "Move cron jobs to the scheduler",
+      "status": {
+        "name": "To Do",
+        "statusCategory": {
+          "key": "new"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "PLT"
+      },
+      "assignee": null,
+      "created": "2026-11-18T11:00:00.000+0100",
+      "updated": "2026-11-18T11:00:00.000+0100",
+      "resolutiondate": null
+    }
+  },
+  {
+    "id": "10024",
+    "key": "MOB-401",
+    "fields": {
+      "summary": "Crash when opening a push notification",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "project": {
+        "key": "MOB"
+      },
+      "assignee": {
+        "accountId": "account-mia",
+        "displayName": "Mia Novak"
+      },
+      "created": "2026-10-20T08:30:00.000+0000",
+      "updated": "2026-10-26T17:00:00.000+0000",
+      "resolutiondate": "2026-10-26T17:00:00.000+0000"
+    }
+  },
+  {
+    "id": "10025",
+    "key": "MOB-402",
+    "fields": {
+      "summary": "Dark mode for the settings screen",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "MOB"
+      },
+      "assignee": {
+        "accountId": "account-mia",
+        "displayName": "Mia Novak"
+      },
+      "created": "2026-10-21T09:00:00.000+0000",
+      "updated": "2026-11-04T16:20:00.000+0000",
+      "resolutiondate": "2026-11-04T16:20:00.000+0000"
+    }
+  },
+  {
+    "id": "10026",
+    "key": "MOB-403",
+    "fields": {
+      "summary": "Offline queue for card freezes",
+      "status": {
+        "name": "In Review",
+        "statusCategory": {
+          "key": "indeterminate"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "MOB"
+      },
+      "assignee": {
+        "accountId": "account-mia",
+        "displayName": "Mia Novak"
+      },
+      "created": "2026-10-30T11:30:00.000+0100",
+      "updated": "2026-11-21T12:40:00.000+0100",
+      "resolutiondate": null
+    }
+  },
+  {
+    "id": "10027",
+    "key": "MOB-404",
+    "fields": {
+      "summary": "Biometric login on Android",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "MOB"
+      },
+      "assignee": {
+        "accountId": "account-kim",
+        "displayName": "Kim Laurent"
+      },
+      "created": "2026-11-02T09:45:00.000+0000",
+      "updated": "2026-11-13T13:35:00.000+0000",
+      "resolutiondate": "2026-11-13T13:35:00.000+0000"
+    }
+  },
+  {
+    "id": "10028",
+    "key": "MOB-405",
+    "fields": {
+      "summary": "Fix the layout on small screens",
+      "status": {
+        "name": "Closed",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "project": {
+        "key": "MOB"
+      },
+      "assignee": {
+        "accountId": "account-mia",
+        "displayName": "Mia Novak"
+      },
+      "created": "2026-11-09T15:10:00.000+0000",
+      "updated": "2026-11-17T10:50:00.000+0000",
+      "resolutiondate": "2026-11-17T10:50:00.000+0000"
+    }
+  },
+  {
+    "id": "10029",
+    "key": "MOB-406",
+    "fields": {
+      "summary": "Accessibility labels on the payment form",
+      "status": {
+        "name": "Done",
+        "statusCategory": {
+          "key": "done"
+        }
+      },
+      "issuetype": {
+        "name": "Task"
+      },
+      "project": {
+        "key": "MOB"
+      },
+      "assignee": {
+        "accountId": "account-kim",
+        "displayName": "Kim Laurent"
+      },
+      "created": "2026-11-10T11:00:00.000+0100",
+      "updated": "2026-11-19T13:30:00.000+0100",
+      "resolutiondate": "2026-11-19T13:30:00.000+0100"
+    }
+  },
+  {
+    "id": "10030",
+    "key": "MOB-407",
+    "fields": {
+      "summary": "Deep links to transactions",
+      "status": {
+        "name": "To Do",
+        "statusCategory": {
+          "key": "new"
+        }
+      },
+      "issuetype": {
+        "name": "Story"
+      },
+      "project": {
+        "key": "MOB"
+      },
+      "assignee": {
+        "accountId": "account-mia",
+        "displayName": "Mia Novak"
+      },
+      "created": "2026-11-16T09:00:00.000+0000",
+      "updated": "2026-11-16T09:00:00.000+0000",
+      "resolutiondate": null
+    }
+  },
+  {
+    "id": "10031",
+    "key": "MOB-408",
+    "fields": {
+      "summary": "Investigate slow app start",
+      "status": {
+        "name": "To Do",
+        "statusCategory": {
+          "key": "new"
+        }
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "project": {
+        "key": "MOB"
+      },
+      "assignee": null,
+      "created": "2026-11-20T16:00:00.000+0000",
+      "updated": "2026-11-20T16:00:00.000+0000",
+      "resolutiondate": null
+    }
+  }
+]

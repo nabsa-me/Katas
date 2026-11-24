@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16.16-alpine
+    ports:
+      # Host port 5810 is reserved for this kata.
+      - '5810:5432'
+    environment:
+      # Local-only credentials for a throwaway container. Never reuse them anywhere else.
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    # Data lives in memory: the tests create a temporary database, and `docker compose down`
+    # leaves nothing behind.
+    tmpfs:
+      - /var/lib/postgresql/data
+    # TCP, not the socket: the image's init server listens only on the socket, so this waits for the real one.
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -h 127.0.0.1 -U postgres -d postgres']
+      interval: 2s
+      timeout: 5s
+      retries: 15

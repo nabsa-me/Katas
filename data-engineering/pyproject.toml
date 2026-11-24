@@ -1,0 +1,39 @@
+[project]
+name = "data-engineering"
+version = "0.1.0"
+description = "Solved katas on data engineering: an incremental Jira extractor, dbt basics and a thin client of governed metrics"
+requires-python = ">=3.12"
+dependencies = [
+  "httpx>=0.28.1",
+  "psycopg[binary]>=3.3.9",
+  "pydantic>=2.14.4",
+  "structlog>=26.1.0",
+  "tenacity>=9.2.1",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.2.0", "respx>=0.23.1", "ruff>=0.17.6"]
+dbt = ["dbt-core>=1.12.7", "dbt-postgres>=1.11.0"]
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14"]
+build-backend = "uv_build"
+
+[tool.uv]
+default-groups = ["dev", "dbt"]
+
+# Installs `src/exercises` and `src/lib` in editable mode, so `uv run python -m exercises.…` works from the kata folder.
+[tool.uv.build-backend]
+module-root = "src"
+module-name = ["exercises", "lib"]
+
+[tool.pytest.ini_options]
+testpaths = ["src"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "SIM"]
