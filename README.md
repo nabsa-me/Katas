@@ -2,6 +2,10 @@
 
 Coding katas, one self-contained folder per topic. Each kata has its own dependencies and its own README with how to run it.
 
+| Kata                                | Topic                                                          |
+| ----------------------------------- | -------------------------------------------------------------- |
+| [svelte-maplibre](svelte-maplibre/) | Web map viewers with Svelte 5 and MapLibre GL JS (8 exercises) |
+
 ## Conventions
 
 - **Folder names** describe the stack or topic of the kata, in kebab-case (`svelte-maplibre`).
