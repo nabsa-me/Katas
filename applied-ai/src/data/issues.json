@@ -1,0 +1,170 @@
+[
+  {
+    "id": "10101",
+    "key": "PLAT-101",
+    "fields": {
+      "summary": "Checkout page times out when the cart has more than 50 items",
+      "description": "Since Monday the checkout request takes over 30 s for large carts and the load balancer returns 504.",
+      "status": { "name": "In Progress" },
+      "assignee": { "accountId": "fictional-iris-navarro", "displayName": "Iris Navarro" },
+      "priority": { "name": "High" },
+      "issuetype": { "name": "Bug" },
+      "labels": ["checkout", "performance"],
+      "updated": "2026-11-20T09:15:00.000+0000"
+    }
+  },
+  {
+    "id": "10102",
+    "key": "PLAT-102",
+    "fields": {
+      "summary": "Add CSV export to the monthly usage report",
+      "description": "Finance wants to download the monthly usage report as CSV instead of copying the table.",
+      "status": { "name": "To Do" },
+      "assignee": null,
+      "priority": { "name": "Medium" },
+      "issuetype": { "name": "Story" },
+      "labels": ["reporting"],
+      "updated": "2026-11-18T14:02:00.000+0000"
+    }
+  },
+  {
+    "id": "10103",
+    "key": "PLAT-103",
+    "fields": {
+      "summary": "Upgrade the Postgres driver to the latest minor version",
+      "description": "Routine dependency upgrade; no behaviour change expected.",
+      "status": { "name": "Done" },
+      "assignee": { "accountId": "fictional-tomas-ferrer", "displayName": "Tomás Ferrer" },
+      "priority": { "name": "Low" },
+      "issuetype": { "name": "Task" },
+      "labels": ["dependencies"],
+      "updated": "2026-11-15T11:40:00.000+0000"
+    }
+  },
+  {
+    "id": "10104",
+    "key": "PLAT-104",
+    "fields": {
+      "summary": "Payments API returning 503 for all customers",
+      "description": "Every payment attempt fails since 08:05 UTC. Status page updated; incident channel opened.",
+      "status": { "name": "In Progress" },
+      "assignee": { "accountId": "fictional-mei-tanaka", "displayName": "Mei Tanaka" },
+      "priority": { "name": "Highest" },
+      "issuetype": { "name": "Bug" },
+      "labels": ["payments", "incident"],
+      "updated": "2026-11-21T08:20:00.000+0000"
+    }
+  },
+  {
+    "id": "10105",
+    "key": "PLAT-105",
+    "fields": {
+      "summary": "Rotate the API keys that were committed to the deploy scripts repository",
+      "description": "A secret scanner flagged two API keys in the history of the deploy scripts repository.",
+      "status": { "name": "To Do" },
+      "assignee": { "accountId": "fictional-kofi-mensah", "displayName": "Kofi Mensah" },
+      "priority": { "name": "Highest" },
+      "issuetype": { "name": "Task" },
+      "labels": ["security"],
+      "updated": "2026-11-21T10:05:00.000+0000"
+    }
+  },
+  {
+    "id": "10106",
+    "key": "PLAT-106",
+    "fields": {
+      "summary": "Dark mode for the admin dashboard",
+      "description": "Several admins asked for a dark theme; follow the existing design tokens.",
+      "status": { "name": "To Do" },
+      "assignee": null,
+      "priority": { "name": "Low" },
+      "issuetype": { "name": "Story" },
+      "labels": ["ui"],
+      "updated": "2026-11-12T16:30:00.000+0000"
+    }
+  },
+  {
+    "id": "10107",
+    "key": "PLAT-107",
+    "fields": {
+      "summary": "Nightly Jira ingestion job has not run for two days",
+      "description": "The scheduler shows no runs since Tuesday; dashboards are stale.",
+      "status": { "name": "In Progress" },
+      "assignee": { "accountId": "fictional-iris-navarro", "displayName": "Iris Navarro" },
+      "priority": { "name": "High" },
+      "issuetype": { "name": "Bug" },
+      "labels": ["data", "ingestion"],
+      "updated": "2026-11-21T07:45:00.000+0000"
+    }
+  },
+  {
+    "id": "10108",
+    "key": "PLAT-108",
+    "fields": {
+      "summary": "Remove the feature flag for the new onboarding flow",
+      "description": "The new onboarding flow has been at 100 % for a month; delete the flag and the old code path.",
+      "status": { "name": "To Do" },
+      "assignee": { "accountId": "fictional-tomas-ferrer", "displayName": "Tomás Ferrer" },
+      "priority": { "name": "Medium" },
+      "issuetype": { "name": "Task" },
+      "labels": ["cleanup"],
+      "updated": "2026-11-19T12:00:00.000+0000"
+    }
+  },
+  {
+    "id": "10109",
+    "key": "PLAT-109",
+    "fields": {
+      "summary": "Search results ignore the selected date range",
+      "description": "Filtering by date range in the issue search returns results outside the range.",
+      "status": { "name": "In Review" },
+      "assignee": { "accountId": "fictional-mei-tanaka", "displayName": "Mei Tanaka" },
+      "priority": { "name": "Medium" },
+      "issuetype": { "name": "Bug" },
+      "labels": ["search"],
+      "updated": "2026-11-20T15:25:00.000+0000"
+    }
+  },
+  {
+    "id": "10110",
+    "key": "PLAT-110",
+    "fields": {
+      "summary": "Single sign-on with the corporate identity provider",
+      "description": "Replace the local passwords of the admin dashboard with OpenID Connect login.",
+      "status": { "name": "In Progress" },
+      "assignee": { "accountId": "fictional-kofi-mensah", "displayName": "Kofi Mensah" },
+      "priority": { "name": "High" },
+      "issuetype": { "name": "Story" },
+      "labels": ["auth"],
+      "updated": "2026-11-17T09:50:00.000+0000"
+    }
+  },
+  {
+    "id": "10111",
+    "key": "PLAT-111",
+    "fields": {
+      "summary": "Document the release process in the repository",
+      "description": "The release steps live in a wiki page that is out of date; move them next to the code.",
+      "status": { "name": "To Do" },
+      "assignee": null,
+      "priority": { "name": "Low" },
+      "issuetype": { "name": "Task" },
+      "labels": ["docs"],
+      "updated": "2026-11-10T10:10:00.000+0000"
+    }
+  },
+  {
+    "id": "10112",
+    "key": "PLAT-112",
+    "fields": {
+      "summary": "Rate limit the public status endpoint",
+      "description": "The status endpoint is called thousands of times a minute by a misconfigured client.",
+      "status": { "name": "To Do" },
+      "assignee": { "accountId": "fictional-iris-navarro", "displayName": "Iris Navarro" },
+      "priority": { "name": "Medium" },
+      "issuetype": { "name": "Task" },
+      "labels": ["api"],
+      "updated": "2026-11-16T13:35:00.000+0000"
+    }
+  }
+]

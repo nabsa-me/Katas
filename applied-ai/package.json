@@ -1,0 +1,29 @@
+{
+  "name": "applied-ai",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "aws-sdk-client-mock": "^4.1.0",
+    "msw": "^3.0.7",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.1176.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@smithy/node-http-handler": "^4.14.2",
+    "pino": "^10.4.0",
+    "zod": "^4.6.7"
+  },
+  "description": "Solved katas on applied AI: Claude via Amazon Bedrock, an MCP server, a Claude Code skill and plugin, and evals",
+  "engines": {
+    "node": ">=22.12"
+  }
+}
