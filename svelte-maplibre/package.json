@@ -1,0 +1,31 @@
+{
+  "name": "svelte-maplibre",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@maplibre/maplibre-gl-style-spec": "^26.9.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^24.19.2",
+    "svelte": "^5.57.3",
+    "svelte-check": "^4.7.7",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "maplibre-gl": "^6.19.0",
+    "proj4": "^2.23.0"
+  },
+  "description": "Solved map viewer katas with Svelte 5 and MapLibre GL JS",
+  "engines": {
+    "node": ">=22.12"
+  }
+}
