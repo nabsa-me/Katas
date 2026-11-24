@@ -1,6 +1,7 @@
 import type { Component } from 'svelte';
 import { slugify } from '../router';
 import BaseMap from './base-map/BaseMap.svelte';
+import DataDrivenStyle from './data-driven-style/DataDrivenStyle.svelte';
 
 export interface Exercise {
   id: string;
@@ -13,4 +14,7 @@ function exercise(title: string, component: Component): Exercise {
   return { id: slugify(title), title, component };
 }
 
-export const exercises: Exercise[] = [exercise('Base map and controls', BaseMap)];
+export const exercises: Exercise[] = [
+  exercise('Base map and controls', BaseMap),
+  exercise('Data-driven style', DataDrivenStyle),
+];
