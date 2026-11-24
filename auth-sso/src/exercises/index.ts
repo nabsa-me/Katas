@@ -13,4 +13,10 @@ export const exercises: Exercise[] = [
       'Authorization Code + PKCE on the server, an httpOnly session cookie and roles checked on the server, instead of tokens in localStorage and a hidden button.',
     demo: { href: '/oidc-nextjs' },
   },
+  {
+    title: 'JWT validation in the API',
+    summary:
+      'Access tokens verified with jose (signature from the JWKS, allowed algorithms, iss, aud, exp) and a requireRole middleware, instead of decoding the token and trusting it.',
+    demo: { command: 'npm run api' },
+  },
 ];
