@@ -48,6 +48,32 @@ export const exercises: Exercise[] = [
       })),
     ),
   },
+  {
+    title: 'Server Components vs. Client Components',
+    folder: 'server-vs-client-components',
+    routes: [
+      {
+        label: 'Data fetched in a client effect',
+        href: '/server-vs-client-components/client-fetch-problem',
+        kind: 'problem',
+      },
+      {
+        label: 'A function passed to a Client Component',
+        href: '/server-vs-client-components/function-prop-problem',
+        kind: 'problem',
+      },
+      {
+        label: 'A class instance passed to a Client Component',
+        href: '/server-vs-client-components/class-instance-problem',
+        kind: 'problem',
+      },
+      {
+        label: 'Data fetched in a Server Component, with a client island',
+        href: '/server-vs-client-components',
+        kind: 'solution',
+      },
+    ],
+  },
 ];
 
 /** Every route, for checks that apply to all of them. */

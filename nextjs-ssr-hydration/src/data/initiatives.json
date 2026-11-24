@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "name": "Self-service onboarding",
+    "team": "Growth",
+    "status": "in_progress",
+    "targetDate": "2027-01-31"
+  },
+  { "id": "2", "name": "Billing reconciliation", "team": "Payments", "status": "planned", "targetDate": "2027-03-15" },
+  { "id": "3", "name": "Search relevance tuning", "team": "Discovery", "status": "done", "targetDate": "2026-10-30" },
+  { "id": "4", "name": "Audit log export", "team": "Platform", "status": "in_progress", "targetDate": "2026-12-20" },
+  { "id": "5", "name": "Mobile offline mode", "team": "Mobile", "status": "planned", "targetDate": "2027-05-01" },
+  { "id": "6", "name": "Single sign-on for partners", "team": "Platform", "status": "done", "targetDate": "2026-09-15" }
+]
