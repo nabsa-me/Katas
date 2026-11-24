@@ -9,6 +9,7 @@ Coding katas, one self-contained folder per topic. Each kata has its own depende
 | [nextjs-ssr-hydration](nextjs-ssr-hydration/) | Server rendering and hydration with the Next.js App Router (3 exercises)                              |
 | [auth-sso](auth-sso/)                         | Single sign-on with OpenID Connect in Next.js and JWT validation in an API (2 exercises)              |
 | [api-integrations](api-integrations/)         | Typed clients and webhooks for Jira, Atlassian GraphQL, Slack, GitHub and Google Sheets (5 exercises) |
+| [poc-to-production](poc-to-production/)       | Hardening a proof of concept for production (1 exercise)                                              |
 
 ## Conventions
 
