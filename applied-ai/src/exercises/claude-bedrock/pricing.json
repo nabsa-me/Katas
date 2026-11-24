@@ -1,0 +1,10 @@
+{
+  "note": "Illustrative values. Verify current prices at https://aws.amazon.com/bedrock/pricing/ before relying on them.",
+  "currency": "USD",
+  "models": {
+    "global.anthropic.claude-opus-5-5": { "inputPerMillion": 4, "outputPerMillion": 20 },
+    "anthropic.claude-opus-5-5": { "inputPerMillion": 4, "outputPerMillion": 20 },
+    "global.anthropic.claude-sonnet-5-5": { "inputPerMillion": 2, "outputPerMillion": 10 },
+    "global.anthropic.claude-haiku-5-5": { "inputPerMillion": 0.1, "outputPerMillion": 0.5 }
+  }
+}

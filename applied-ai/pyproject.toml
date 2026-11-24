@@ -1,0 +1,22 @@
+[project]
+name = "applied-ai"
+version = "0.1.0"
+description = "Python twin of the Claude via Amazon Bedrock kata: Converse with boto3, tested with botocore Stubber"
+requires-python = ">=3.12"
+dependencies = ["boto3>=1.44.10"]
+
+[dependency-groups]
+dev = ["pytest>=9.2.0", "ruff>=0.17.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["src/exercises/claude-bedrock/python"]
+pythonpath = ["src/exercises/claude-bedrock/python"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+# The exercise modules are imported by name (pytest pythonpath), so ruff sorts them as first-party.
+src = ["src/exercises/claude-bedrock/python"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]

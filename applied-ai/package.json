@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
-    "test": "vitest run"
+    "test": "vitest run",
+    "ask": "node --env-file-if-exists=.env --import tsx src/exercises/claude-bedrock/ask.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
