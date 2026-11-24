@@ -1,0 +1,3 @@
+bucket = "katas-terraform-state-111122223333"
+key    = "dev/postgres.tfstate"
+region = "eu-west-1"

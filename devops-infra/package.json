@@ -9,7 +9,8 @@
     "validate": "tsx src/validate.ts",
     "validate:dockerfile": "tsx src/validate.ts dockerfile",
     "validate:k8s": "tsx src/validate.ts k8s",
-    "validate:workflows": "tsx src/validate.ts workflows"
+    "validate:workflows": "tsx src/validate.ts workflows",
+    "validate:terraform": "tsx src/validate.ts terraform"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
