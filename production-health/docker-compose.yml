@@ -1,0 +1,24 @@
+# Postgres for the issues service: its queries and its /readyz check.
+# Start it with `docker compose up -d --wait`; reset the data with `docker compose down -v`.
+name: production-health
+
+services:
+  postgres:
+    image: postgres:16.16-alpine
+    ports:
+      - '5809:5432'
+    environment:
+      # Local-only credentials for a throwaway container. Never reuse them anywhere else.
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: production_health
+    volumes:
+      # Runs once, on the first start with an empty data directory.
+      - ./src/data/issues.sql:/docker-entrypoint-initdb.d/issues.sql:ro
+    healthcheck:
+      # Over TCP on purpose: while the init script runs, the image starts a temporary server that only
+      # listens on the Unix socket, so a socket check would report healthy before the data is loaded.
+      test: ['CMD', 'pg_isready', '-h', '127.0.0.1', '-U', 'postgres', '-d', 'production_health']
+      interval: 2s
+      timeout: 3s
+      retries: 30
