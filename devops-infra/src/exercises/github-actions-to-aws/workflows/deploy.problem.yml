@@ -1,0 +1,30 @@
+# Flawed on purpose: it deploys, with long-lived AWS keys stored in GitHub, one job doing everything,
+# no environments or approvals, and a `latest` tag that says nothing about what is running.
+name: deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm test
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+      - uses: aws-actions/amazon-ecr-login@v2
+      - run: |
+          docker build -t 111122223333.dkr.ecr.eu-west-1.amazonaws.com/katas-web:latest .
+          docker push 111122223333.dkr.ecr.eu-west-1.amazonaws.com/katas-web:latest
+      - run: |
+          aws eks update-kubeconfig --name katas-prod --region eu-west-1
+          kubectl rollout restart deployment/katas-web

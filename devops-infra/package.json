@@ -8,7 +8,8 @@
     "test": "vitest run",
     "validate": "tsx src/validate.ts",
     "validate:dockerfile": "tsx src/validate.ts dockerfile",
-    "validate:k8s": "tsx src/validate.ts k8s"
+    "validate:k8s": "tsx src/validate.ts k8s",
+    "validate:workflows": "tsx src/validate.ts workflows"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",

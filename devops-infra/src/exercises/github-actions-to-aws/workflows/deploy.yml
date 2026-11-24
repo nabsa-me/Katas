@@ -1,0 +1,168 @@
+# Builds the image once per commit on main and promotes that same image, by digest, through
+# dev → int → stag → prod. No AWS keys are stored in GitHub: every job exchanges a short-lived OIDC
+# token for temporary credentials of a role whose trust policy names this repository.
+name: deploy
+
+on:
+  push:
+    branches: [main]
+
+# Default for every job: read the code. Jobs that talk to AWS add `id-token: write` themselves.
+permissions:
+  contents: read
+
+env:
+  AWS_REGION: eu-west-1
+  ECR_REPOSITORY: katas-web
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      image: ${{ steps.image.outputs.image }}
+    steps:
+      - uses: actions/checkout@v7
+      # Build role in the tooling account: its trust policy accepts `ref:refs/heads/main` only.
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_BUILD_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - id: ecr
+        uses: aws-actions/amazon-ecr-login@v2
+      - uses: docker/setup-buildx-action@v4
+      - id: push
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          push: true
+          # The commit SHA as tag: every image says which code it holds. Tags in ECR are immutable.
+          tags: ${{ steps.ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      # Environments receive the digest, not the tag: exactly the bytes that were built and tested.
+      - id: image
+        env:
+          REGISTRY: ${{ steps.ecr.outputs.registry }}
+          DIGEST: ${{ steps.push.outputs.digest }}
+        run: echo "image=$REGISTRY/$ECR_REPOSITORY@$DIGEST" >> "$GITHUB_OUTPUT"
+
+  # The four deploy jobs are the same steps with a different environment. Each GitHub environment holds
+  # its own variables (AWS_DEPLOY_ROLE_ARN, EKS_CLUSTER) and protection rules (reviewers for stag and
+  # prod, deployments from main only). A failed rollout stops the promotion.
+  deploy-dev:
+    needs: [build]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: dev
+    # One deployment per environment at a time; a newer run waits instead of cancelling a rollout.
+    concurrency:
+      group: deploy-dev
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Roll out the image
+        env:
+          IMAGE: ${{ needs.build.outputs.image }}
+          CLUSTER: ${{ vars.EKS_CLUSTER }}
+        run: |
+          aws eks update-kubeconfig --name "$CLUSTER" --region "$AWS_REGION"
+          kubectl set image deployment/katas-web web="$IMAGE"
+          kubectl rollout status deployment/katas-web --timeout=5m
+      - name: Roll back a failed rollout
+        if: failure()
+        run: kubectl rollout undo deployment/katas-web
+
+  deploy-int:
+    needs: [build, deploy-dev]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: int
+    concurrency:
+      group: deploy-int
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Roll out the image
+        env:
+          IMAGE: ${{ needs.build.outputs.image }}
+          CLUSTER: ${{ vars.EKS_CLUSTER }}
+        run: |
+          aws eks update-kubeconfig --name "$CLUSTER" --region "$AWS_REGION"
+          kubectl set image deployment/katas-web web="$IMAGE"
+          kubectl rollout status deployment/katas-web --timeout=5m
+      - name: Roll back a failed rollout
+        if: failure()
+        run: kubectl rollout undo deployment/katas-web
+
+  deploy-stag:
+    needs: [build, deploy-int]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: stag
+    concurrency:
+      group: deploy-stag
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Roll out the image
+        env:
+          IMAGE: ${{ needs.build.outputs.image }}
+          CLUSTER: ${{ vars.EKS_CLUSTER }}
+        run: |
+          aws eks update-kubeconfig --name "$CLUSTER" --region "$AWS_REGION"
+          kubectl set image deployment/katas-web web="$IMAGE"
+          kubectl rollout status deployment/katas-web --timeout=5m
+      - name: Roll back a failed rollout
+        if: failure()
+        run: kubectl rollout undo deployment/katas-web
+
+  deploy-prod:
+    needs: [build, deploy-stag]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: prod
+    concurrency:
+      group: deploy-prod
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      # Prod deploy role: its trust policy (iam/trust-policy.json) accepts `environment:prod` only.
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Roll out the image
+        env:
+          IMAGE: ${{ needs.build.outputs.image }}
+          CLUSTER: ${{ vars.EKS_CLUSTER }}
+        run: |
+          aws eks update-kubeconfig --name "$CLUSTER" --region "$AWS_REGION"
+          kubectl set image deployment/katas-web web="$IMAGE"
+          kubectl rollout status deployment/katas-web --timeout=5m
+      - name: Roll back a failed rollout
+        if: failure()
+        run: kubectl rollout undo deployment/katas-web
