@@ -4,6 +4,7 @@ import BaseMap from './base-map/BaseMap.svelte';
 import DataDrivenStyle from './data-driven-style/DataDrivenStyle.svelte';
 import GeocoderSearch from './geocoder-search/GeocoderSearch.svelte';
 import PopupAndPanel from './popup-and-panel/PopupAndPanel.svelte';
+import VisibleArea from './visible-area/VisibleArea.svelte';
 import WmsLayer from './wms-layer/WmsLayer.svelte';
 
 export interface Exercise {
@@ -23,4 +24,5 @@ export const exercises: Exercise[] = [
   exercise('Popup and side panel', PopupAndPanel),
   exercise('ICGC WMS layer', WmsLayer),
   exercise('Geocoder search', GeocoderSearch),
+  exercise('Visible area and synced list', VisibleArea),
 ];
