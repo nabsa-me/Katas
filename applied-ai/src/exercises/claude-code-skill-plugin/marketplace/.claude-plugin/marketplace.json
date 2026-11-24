@@ -1,0 +1,12 @@
+{
+  "name": "katas-internal-tools",
+  "owner": { "name": "Platform Team (fictional)" },
+  "description": "Internal Claude Code plugins of a fictional platform team.",
+  "plugins": [
+    {
+      "name": "release-tools",
+      "source": "./plugins/release-tools",
+      "description": "Release readiness checklist with a pending-migrations check, for services deployed to production."
+    }
+  ]
+}

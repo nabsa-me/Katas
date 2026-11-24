@@ -5,6 +5,9 @@
     "lib": ["ES2023"],
     "types": ["node"],
     "skipLibCheck": true,
+    /* The skill's helper is plain JavaScript (no build step in a plugin), type-checked from its JSDoc. */
+    "allowJs": true,
+    "checkJs": true,
 
     /* Bundler mode */
     "module": "esnext",

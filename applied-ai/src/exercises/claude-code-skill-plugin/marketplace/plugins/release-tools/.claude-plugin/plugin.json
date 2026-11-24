@@ -1,0 +1,7 @@
+{
+  "name": "release-tools",
+  "version": "0.1.0",
+  "description": "Release readiness for services: a checklist skill with a pending-migrations check, run before tagging or deploying to production.",
+  "author": { "name": "Platform Team (fictional)" },
+  "keywords": ["release", "checklist", "migrations"]
+}
