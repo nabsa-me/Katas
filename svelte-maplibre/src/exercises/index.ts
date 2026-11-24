@@ -3,6 +3,7 @@ import { slugify } from '../router';
 import BaseMap from './base-map/BaseMap.svelte';
 import DataDrivenStyle from './data-driven-style/DataDrivenStyle.svelte';
 import PopupAndPanel from './popup-and-panel/PopupAndPanel.svelte';
+import WmsLayer from './wms-layer/WmsLayer.svelte';
 
 export interface Exercise {
   id: string;
@@ -19,4 +20,5 @@ export const exercises: Exercise[] = [
   exercise('Base map and controls', BaseMap),
   exercise('Data-driven style', DataDrivenStyle),
   exercise('Popup and side panel', PopupAndPanel),
+  exercise('ICGC WMS layer', WmsLayer),
 ];
