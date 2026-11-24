@@ -1,0 +1,22 @@
+{
+  "name": "devops-infra",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
+    "test": "vitest run",
+    "validate": "tsx src/validate.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.1",
+    "yaml": "^2.9.1"
+  },
+  "description": "Solved katas on shipping a web app: Docker image, Kubernetes manifests, GitHub Actions to AWS, branch rules and Terraform",
+  "engines": {
+    "node": ">=22.12"
+  }
+}
