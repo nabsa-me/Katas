@@ -6,3 +6,25 @@ coverage/
 Thumbs.db
 .vscode/
 .idea/
+
+# Local environment: only the .env.example files are committed
+.env
+.env.*
+!.env.example
+
+# Next.js and Playwright
+.next/
+next-env.d.ts
+playwright-report/
+test-results/
+blob-report/
+
+# Python, dbt and Terraform
+.venv/
+__pycache__/
+.pytest_cache/
+target/
+dbt_packages/
+logs/
+.terraform/
+*.tfstate*
