@@ -11,6 +11,7 @@ Coding katas, one self-contained folder per topic. Each kata has its own depende
 | [api-integrations](api-integrations/)         | Typed clients and webhooks for Jira, Atlassian GraphQL, Slack, GitHub and Google Sheets (5 exercises)            |
 | [poc-to-production](poc-to-production/)       | Hardening a proof of concept for production (1 exercise)                                                         |
 | [postgres-rds](postgres-rds/)                 | PostgreSQL for RDS: schema design, safe migrations, least privilege, query performance and backups (5 exercises) |
+| [devops-infra](devops-infra/)                 | Production Dockerfile, Kubernetes, GitHub Actions to AWS, Git flow rules and Terraform (5 exercises)             |
 
 ## Conventions
 
