@@ -1,3 +1,5 @@
+import { caseHref, CASES, VARIANTS } from '../exercises/hydration-mismatch-catalog/cases';
+
 export interface ExerciseRoute {
   label: string;
   href: string;
@@ -34,6 +36,17 @@ export const exercises: Exercise[] = [
         kind: 'solution',
       },
     ],
+  },
+  {
+    title: 'Hydration mismatch catalog',
+    folder: 'hydration-mismatch-catalog',
+    routes: CASES.flatMap((entry) =>
+      VARIANTS.map((variant) => ({
+        label: `${entry.title} (${variant})`,
+        href: caseHref(entry.slug, variant),
+        kind: variant,
+      })),
+    ),
   },
 ];
 
