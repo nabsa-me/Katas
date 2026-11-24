@@ -6,4 +6,11 @@ export interface Exercise {
   demo: { href: string } | { command: string };
 }
 
-export const exercises: Exercise[] = [];
+export const exercises: Exercise[] = [
+  {
+    title: 'OIDC in Next.js',
+    summary:
+      'Authorization Code + PKCE on the server, an httpOnly session cookie and roles checked on the server, instead of tokens in localStorage and a hidden button.',
+    demo: { href: '/oidc-nextjs' },
+  },
+];
