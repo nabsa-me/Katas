@@ -1,0 +1,16 @@
+{
+  "range": "Roster!A1:D10",
+  "majorDimension": "ROWS",
+  "values": [
+    ["Name", "Email", "Team", "Allocation"],
+    ["Marta Vidal", "marta.vidal@example.com", "Platform", "100"],
+    ["Jordi Puig", "jordi.puig@example.com", "Platform", "50"],
+    ["Laia Ferrer", "laia.ferrer@example", "Data", "80"],
+    [],
+    ["Pau Serra", "pau.serra@example.com", "Data"],
+    ["Núria Camps", "nuria.camps@example.com", "Web", "120"],
+    ["Arnau Soler", "arnau.soler@example.com", "Web", "full time"],
+    ["Clara Roca", "clara.roca@example.com", "", "60"],
+    ["Ona Mas", " ona.mas@example.com ", "Web", "75"]
+  ]
+}

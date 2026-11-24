@@ -1,0 +1,26 @@
+{
+  "name": "api-integrations",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "graphql": "^17.1.0",
+    "msw": "^3.0.7",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.1",
+    "google-auth-library": "^11.3.4",
+    "zod": "^4.6.7"
+  },
+  "description": "Solved katas on third-party API integrations: Jira REST, Atlassian GraphQL, Slack, GitHub webhooks and Google Sheets",
+  "engines": {
+    "node": ">=22.12"
+  }
+}

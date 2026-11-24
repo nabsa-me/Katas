@@ -1,0 +1,19 @@
+{
+  "action": "opened",
+  "number": 42,
+  "pull_request": {
+    "number": 42,
+    "title": "Add a readiness probe to the API",
+    "html_url": "https://github.com/example-org/issue-service/pull/42",
+    "draft": false,
+    "user": { "login": "marta-vidal" },
+    "head": { "ref": "feature/readiness-probe" },
+    "base": { "ref": "main" }
+  },
+  "repository": {
+    "name": "issue-service",
+    "full_name": "example-org/issue-service",
+    "owner": { "login": "example-org" }
+  },
+  "sender": { "login": "marta-vidal" }
+}

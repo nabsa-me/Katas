@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ari:cloud:townsquare:fictional-site:goal/goal-0001",
+    "name": "Cut the incident response time in half",
+    "status": { "value": "on_track" },
+    "owner": { "aaid": "fictional-account-marta-vidal" },
+    "targetDate": "2026-12-31"
+  },
+  {
+    "id": "ari:cloud:townsquare:fictional-site:goal/goal-0002",
+    "name": "Daily Jira data in the warehouse",
+    "status": { "value": "on_track" },
+    "owner": { "aaid": "fictional-account-jordi-puig" },
+    "targetDate": "2027-03-31"
+  },
+  {
+    "id": "ari:cloud:townsquare:fictional-site:goal/goal-0003",
+    "name": "Every service behind health checks",
+    "status": { "value": "on_track" },
+    "owner": { "aaid": "fictional-account-laia-ferrer" },
+    "targetDate": "2027-01-31"
+  },
+  {
+    "id": "ari:cloud:townsquare:fictional-site:goal/goal-0004",
+    "name": "Least-privilege database users everywhere",
+    "status": { "value": "on_track" },
+    "owner": { "aaid": "fictional-account-pau-serra" },
+    "targetDate": "2027-02-28"
+  },
+  {
+    "id": "ari:cloud:townsquare:fictional-site:goal/goal-0005",
+    "name": "Self-service team dashboards",
+    "status": { "value": "on_track" },
+    "owner": { "aaid": "fictional-account-nuria-camps" },
+    "targetDate": null
+  }
+]

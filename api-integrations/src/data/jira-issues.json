@@ -1,0 +1,122 @@
+[
+  {
+    "id": "10101",
+    "key": "PLAT-101",
+    "fields": {
+      "summary": "Rotate the database credentials",
+      "status": { "name": "To Do" },
+      "assignee": { "displayName": "Marta Vidal" },
+      "updated": "2026-11-02T09:15:00.000+0100"
+    }
+  },
+  {
+    "id": "10102",
+    "key": "PLAT-102",
+    "fields": {
+      "summary": "Add a readiness probe to the API",
+      "status": { "name": "In Progress" },
+      "assignee": { "displayName": "Jordi Puig" },
+      "updated": "2026-11-03T11:40:00.000+0100"
+    }
+  },
+  {
+    "id": "10103",
+    "key": "PLAT-103",
+    "fields": {
+      "summary": "Alert on p95 latency above 800 ms",
+      "status": { "name": "To Do" },
+      "assignee": null,
+      "updated": "2026-11-04T16:05:00.000+0100"
+    }
+  },
+  {
+    "id": "10104",
+    "key": "PLAT-104",
+    "fields": {
+      "summary": "Move the sessions list to keyset pagination",
+      "status": { "name": "In Review" },
+      "assignee": { "displayName": "Pau Serra" },
+      "updated": "2026-11-05T08:30:00.000+0100"
+    }
+  },
+  {
+    "id": "10105",
+    "key": "PLAT-105",
+    "fields": {
+      "summary": "Retry Slack notifications on 429",
+      "status": { "name": "To Do" },
+      "assignee": { "displayName": "Laia Ferrer" },
+      "updated": "2026-11-06T10:00:00.000+0100"
+    }
+  },
+  {
+    "id": "10106",
+    "key": "PLAT-106",
+    "fields": {
+      "summary": "Verify GitHub webhook signatures",
+      "status": { "name": "In Progress" },
+      "assignee": { "displayName": "Núria Camps" },
+      "updated": "2026-11-07T12:20:00.000+0100"
+    }
+  },
+  {
+    "id": "10107",
+    "key": "PLAT-107",
+    "fields": {
+      "summary": "Validate the team roster sheet before importing it",
+      "status": { "name": "To Do" },
+      "assignee": { "displayName": "Marta Vidal" },
+      "updated": "2026-11-10T09:45:00.000+0100"
+    }
+  },
+  {
+    "id": "10108",
+    "key": "PLAT-108",
+    "fields": {
+      "summary": "Drop the legacy search endpoint",
+      "status": { "name": "To Do" },
+      "assignee": null,
+      "updated": "2026-11-11T15:10:00.000+0100"
+    }
+  },
+  {
+    "id": "10109",
+    "key": "PLAT-109",
+    "fields": {
+      "summary": "Cap concurrent requests to the Jira API",
+      "status": { "name": "In Review" },
+      "assignee": { "displayName": "Jordi Puig" },
+      "updated": "2026-11-12T17:35:00.000+0100"
+    }
+  },
+  {
+    "id": "10110",
+    "key": "PLAT-110",
+    "fields": {
+      "summary": "Document the service account setup",
+      "status": { "name": "To Do" },
+      "assignee": { "displayName": "Laia Ferrer" },
+      "updated": "2026-11-13T09:05:00.000+0100"
+    }
+  },
+  {
+    "id": "10111",
+    "key": "PLAT-111",
+    "fields": {
+      "summary": "Report partial GraphQL errors in the goals sync",
+      "status": { "name": "In Progress" },
+      "assignee": { "displayName": "Pau Serra" },
+      "updated": "2026-11-16T14:50:00.000+0100"
+    }
+  },
+  {
+    "id": "10112",
+    "key": "PLAT-112",
+    "fields": {
+      "summary": "Acknowledge slash commands within three seconds",
+      "status": { "name": "To Do" },
+      "assignee": { "displayName": "Núria Camps" },
+      "updated": "2026-11-17T10:25:00.000+0100"
+    }
+  }
+]
