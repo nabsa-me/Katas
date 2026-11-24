@@ -1,0 +1,19 @@
+# Goes in .github/CODEOWNERS. For each changed file, the LAST matching pattern decides its owners,
+# so the catch-all comes first and the specific paths after it. With the ruleset's
+# require_code_owner_review, a pull request needs an approval from the owners of every changed file.
+
+# Everything else: the team that owns the application.
+*                       @ORG/web-team
+
+# Database migrations: a schema change can break the running version or lock a table.
+/migrations/            @ORG/database-owners
+
+# Infrastructure as code: Terraform, Kubernetes manifests, workflows that deploy.
+/infra/                 @ORG/platform-team
+/.github/workflows/     @ORG/platform-team
+
+# Roles, policies and access rules.
+/permissions/           @ORG/security-team
+
+# Whoever can edit this file can remove the rules above: it needs the security team too.
+/.github/CODEOWNERS     @ORG/platform-team @ORG/security-team
