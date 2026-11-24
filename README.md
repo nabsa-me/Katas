@@ -14,6 +14,7 @@ Coding katas, one self-contained folder per topic. Each kata has its own depende
 | [devops-infra](devops-infra/)                 | Production Dockerfile, Kubernetes, GitHub Actions to AWS, Git flow rules and Terraform (5 exercises)                 |
 | [production-health](production-health/)       | Observability, load testing with k6 and incident response for a Node service (3 exercises)                           |
 | [data-engineering](data-engineering/)         | Incremental Jira extraction into Postgres, dbt basics and a thin client of governed metrics, in Python (3 exercises) |
+| [applied-ai](applied-ai/)                     | Claude on Amazon Bedrock, an MCP server, a Claude Code skill and plugin, and evals (4 exercises)                     |
 
 ## Conventions
 
