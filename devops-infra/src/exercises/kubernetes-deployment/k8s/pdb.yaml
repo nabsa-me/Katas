@@ -1,0 +1,13 @@
+# Voluntary disruptions (node drains, cluster upgrades) evict at most one pod at a time.
+# It does not protect against crashes or node failures; replicas and readiness do.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: katas-web
+  labels:
+    app.kubernetes.io/name: katas-web
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: katas-web

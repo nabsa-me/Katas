@@ -1,0 +1,21 @@
+# Flawed on purpose: valid for the API server, and it runs, but nothing tells Kubernetes when the
+# pod is ready or stuck, how much it uses, or what it may do.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: katas-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: katas-web
+  template:
+    metadata:
+      labels:
+        app: katas-web
+    spec:
+      containers:
+        - name: web
+          image: 111122223333.dkr.ecr.eu-west-1.amazonaws.com/katas-web:latest
+          ports:
+            - containerPort: 3000

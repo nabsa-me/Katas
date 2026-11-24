@@ -1,0 +1,11 @@
+# Non-secret settings, injected as environment variables with envFrom. Changing it does not restart
+# the pods: roll them (`kubectl rollout restart`) or let the pipeline change the pod template.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: katas-web-config
+  labels:
+    app.kubernetes.io/name: katas-web
+data:
+  APP_ENVIRONMENT: prod
+  LOG_LEVEL: info

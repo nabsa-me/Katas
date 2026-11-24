@@ -1,0 +1,106 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: katas-web
+  labels:
+    app.kubernetes.io/name: katas-web
+    app.kubernetes.io/part-of: katas
+spec:
+  # No `replicas`: the HorizontalPodAutoscaler owns the count. A value here would reset it on every apply.
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: katas-web
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      # One extra pod at a time, and never fewer ready pods than wanted: capacity never drops.
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: katas-web
+        app.kubernetes.io/part-of: katas
+    spec:
+      # The app never calls the Kubernetes API, so it gets no service account token.
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        seccompProfile:
+          type: RuntimeDefault
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: web
+          # Deployed by digest (the pipeline sets it); the digest below is a placeholder.
+          image: 111122223333.dkr.ecr.eu-west-1.amazonaws.com/katas-web@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+          ports:
+            - name: http
+              containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: katas-web-config
+          env:
+            # The image sets it too; explicit here so the runtime's pod-name HOSTNAME never decides
+            # which address the Next.js server listens on.
+            - name: HOSTNAME
+              value: 0.0.0.0
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: katas-web-secrets
+                  key: database-password
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: '1'
+              memory: 256Mi
+          # Startup: up to 60 s to boot. Liveness and readiness only start once it has passed.
+          startupProbe:
+            httpGet:
+              path: /api/health
+              port: http
+            periodSeconds: 2
+            failureThreshold: 30
+          # Readiness: out of the Service endpoints after 3 failures, back in when it recovers.
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: http
+            periodSeconds: 5
+            failureThreshold: 3
+          # Liveness: restarted only after 30 s without answering, so a slow moment is not a restart.
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          lifecycle:
+            # Keeps serving while the endpoint removal reaches every node, then SIGTERM arrives.
+            preStop:
+              sleep:
+                seconds: 5
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ['ALL']
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+            - name: next-cache
+              mountPath: /app/.next/cache
+      volumes:
+        # The only writable paths, as in `docker run --read-only --tmpfs …`.
+        - name: tmp
+          emptyDir:
+            sizeLimit: 64Mi
+        - name: next-cache
+          emptyDir:
+            sizeLimit: 256Mi
