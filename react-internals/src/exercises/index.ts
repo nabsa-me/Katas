@@ -2,6 +2,7 @@ import type { ComponentType } from 'react';
 import { slugify } from '../router';
 import { ContextProviderValue } from './context-provider-value/ContextProviderValue';
 import { ReactMemoInlineProps } from './react-memo-inline-props/ReactMemoInlineProps';
+import { StaleClosures } from './stale-closures/StaleClosures';
 import { UseMemoInlineObject } from './usememo-inline-object/UseMemoInlineObject';
 
 export interface Exercise {
@@ -19,4 +20,5 @@ export const exercises: Exercise[] = [
   exercise('useMemo with an inline object dependency', UseMemoInlineObject),
   exercise('React.memo defeated by inline props', ReactMemoInlineProps),
   exercise('Inline value in a Context Provider', ContextProviderValue),
+  exercise('Stale closures', StaleClosures),
 ];

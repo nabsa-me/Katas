@@ -260,3 +260,9 @@ button[aria-pressed='true'] {
 .frame.highlighted {
   border-color: var(--color-focus);
 }
+
+/* Counter used by the stale closures exercise */
+.ticker {
+  font-size: 2.5rem;
+  font-variant-numeric: tabular-nums;
+}
