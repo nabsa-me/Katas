@@ -2,6 +2,7 @@ import type { Component } from 'svelte';
 import { slugify } from '../router';
 import BaseMap from './base-map/BaseMap.svelte';
 import DataDrivenStyle from './data-driven-style/DataDrivenStyle.svelte';
+import GeocoderSearch from './geocoder-search/GeocoderSearch.svelte';
 import PopupAndPanel from './popup-and-panel/PopupAndPanel.svelte';
 import WmsLayer from './wms-layer/WmsLayer.svelte';
 
@@ -21,4 +22,5 @@ export const exercises: Exercise[] = [
   exercise('Data-driven style', DataDrivenStyle),
   exercise('Popup and side panel', PopupAndPanel),
   exercise('ICGC WMS layer', WmsLayer),
+  exercise('Geocoder search', GeocoderSearch),
 ];
