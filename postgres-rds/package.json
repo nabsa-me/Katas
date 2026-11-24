@@ -6,7 +6,8 @@
   "scripts": {
     "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
     "test": "vitest run",
-    "explain": "tsx src/exercises/query-performance/explain.ts"
+    "explain": "tsx src/exercises/query-performance/explain.ts",
+    "restore-drill": "tsx src/exercises/backups-and-restore/restore-drill.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
