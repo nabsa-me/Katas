@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { slugify } from '../router';
+import { ContextProviderValue } from './context-provider-value/ContextProviderValue';
 import { ReactMemoInlineProps } from './react-memo-inline-props/ReactMemoInlineProps';
 import { UseMemoInlineObject } from './usememo-inline-object/UseMemoInlineObject';
 
@@ -17,4 +18,5 @@ function exercise(title: string, component: ComponentType): Exercise {
 export const exercises: Exercise[] = [
   exercise('useMemo with an inline object dependency', UseMemoInlineObject),
   exercise('React.memo defeated by inline props', ReactMemoInlineProps),
+  exercise('Inline value in a Context Provider', ContextProviderValue),
 ];
