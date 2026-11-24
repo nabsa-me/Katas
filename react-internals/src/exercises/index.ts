@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { slugify } from '../router';
+import { ReactMemoInlineProps } from './react-memo-inline-props/ReactMemoInlineProps';
 import { UseMemoInlineObject } from './usememo-inline-object/UseMemoInlineObject';
 
 export interface Exercise {
@@ -13,4 +14,7 @@ function exercise(title: string, component: ComponentType): Exercise {
   return { id: slugify(title), title, component };
 }
 
-export const exercises: Exercise[] = [exercise('useMemo with an inline object dependency', UseMemoInlineObject)];
+export const exercises: Exercise[] = [
+  exercise('useMemo with an inline object dependency', UseMemoInlineObject),
+  exercise('React.memo defeated by inline props', ReactMemoInlineProps),
+];
