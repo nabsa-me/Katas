@@ -6,7 +6,8 @@
   "scripts": {
     "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
     "test": "vitest run",
-    "start": "node --env-file-if-exists=.env --import tsx --import ./src/exercises/node-observability/instrument.ts src/exercises/node-observability/main.ts"
+    "start": "node --env-file-if-exists=.env --import tsx --import ./src/exercises/node-observability/instrument.ts src/exercises/node-observability/main.ts",
+    "load-test": "tsx src/exercises/load-testing-k6/run-load-test.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
