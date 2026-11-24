@@ -4,6 +4,7 @@ import BaseMap from './base-map/BaseMap.svelte';
 import Clustering from './clustering/Clustering.svelte';
 import DataDrivenStyle from './data-driven-style/DataDrivenStyle.svelte';
 import GeocoderSearch from './geocoder-search/GeocoderSearch.svelte';
+import IntegratedViewer from './integrated-viewer/IntegratedViewer.svelte';
 import PopupAndPanel from './popup-and-panel/PopupAndPanel.svelte';
 import VisibleArea from './visible-area/VisibleArea.svelte';
 import WmsLayer from './wms-layer/WmsLayer.svelte';
@@ -27,4 +28,5 @@ export const exercises: Exercise[] = [
   exercise('Geocoder search', GeocoderSearch),
   exercise('Visible area and synced list', VisibleArea),
   exercise('Clustering', Clustering),
+  exercise('Integrated viewer', IntegratedViewer),
 ];

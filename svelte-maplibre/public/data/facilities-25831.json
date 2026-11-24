@@ -1,0 +1,375 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::25831"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [430605.31, 4582051.51]
+      },
+      "properties": {
+        "name": "Les Oliveres Library",
+        "type": "library",
+        "capacity": 420,
+        "municipality": "Barcelona"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [429368.5, 4583839.92]
+      },
+      "properties": {
+        "name": "El Turonet School",
+        "type": "school",
+        "capacity": 650,
+        "municipality": "Barcelona"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [432296.16, 4584034.02]
+      },
+      "properties": {
+        "name": "Rambla Nova Health Center",
+        "type": "health_center",
+        "capacity": 300,
+        "municipality": "Barcelona"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [424721.56, 4579112.43]
+      },
+      "properties": {
+        "name": "La Farga Sports Center",
+        "type": "sports_center",
+        "capacity": 900,
+        "municipality": "L'Hospitalet de Llobregat"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [437103.99, 4588986.89]
+      },
+      "properties": {
+        "name": "Can Mestres Library",
+        "type": "library",
+        "capacity": 260,
+        "municipality": "Badalona"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [425689.24, 4599976.4]
+      },
+      "properties": {
+        "name": "Els Til·lers School",
+        "type": "school",
+        "capacity": 540,
+        "municipality": "Sabadell"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [417534.87, 4601730.68]
+      },
+      "properties": {
+        "name": "Can Jofresa Sports Center",
+        "type": "sports_center",
+        "capacity": 1100,
+        "municipality": "Terrassa"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [453706.59, 4598853.69]
+      },
+      "properties": {
+        "name": "Cirera Health Center",
+        "type": "health_center",
+        "capacity": 240,
+        "municipality": "Mataró"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [440673.16, 4606499.19]
+      },
+      "properties": {
+        "name": "Roca Umbert Library",
+        "type": "library",
+        "capacity": 380,
+        "municipality": "Granollers"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [438150.2, 4642273.32]
+      },
+      "properties": {
+        "name": "La Sínia School",
+        "type": "school",
+        "capacity": 450,
+        "municipality": "Vic"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [402358.37, 4620242.97]
+      },
+      "properties": {
+        "name": "Congost Sports Center",
+        "type": "sports_center",
+        "capacity": 800,
+        "municipality": "Manresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [485170.77, 4647460.12]
+      },
+      "properties": {
+        "name": "Onyar Library",
+        "type": "library",
+        "capacity": 350,
+        "municipality": "Girona"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [485669.63, 4648347.32]
+      },
+      "properties": {
+        "name": "Santa Clara Health Center",
+        "type": "health_center",
+        "capacity": 280,
+        "municipality": "Girona"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [496783.65, 4679422.36]
+      },
+      "properties": {
+        "name": "Empordà School",
+        "type": "school",
+        "capacity": 500,
+        "municipality": "Figueres"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [457882.86, 4669998.63]
+      },
+      "properties": {
+        "name": "Volcà Library",
+        "type": "library",
+        "capacity": 150,
+        "municipality": "Olot"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [301712.79, 4610100.68]
+      },
+      "properties": {
+        "name": "Segre Sports Center",
+        "type": "sports_center",
+        "capacity": 950,
+        "municipality": "Lleida"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [302274.63, 4609307.37]
+      },
+      "properties": {
+        "name": "Pardinyes Health Center",
+        "type": "health_center",
+        "capacity": 320,
+        "municipality": "Lleida"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [345024.3, 4612257.11]
+      },
+      "properties": {
+        "name": "Ondara School",
+        "type": "school",
+        "capacity": 380,
+        "municipality": "Tàrrega"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [373094.44, 4690675.78]
+      },
+      "properties": {
+        "name": "Valira Library",
+        "type": "library",
+        "capacity": 120,
+        "municipality": "La Seu d'Urgell"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [352664.44, 4553451.5]
+      },
+      "properties": {
+        "name": "Serrallo Sports Center",
+        "type": "sports_center",
+        "capacity": 1200,
+        "municipality": "Tarragona"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [353495.1, 4552990.55]
+      },
+      "properties": {
+        "name": "Part Alta Health Center",
+        "type": "health_center",
+        "capacity": 260,
+        "municipality": "Tarragona"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [341081.51, 4557692.69]
+      },
+      "properties": {
+        "name": "Mas Iglesias School",
+        "type": "school",
+        "capacity": 600,
+        "municipality": "Reus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [290995.75, 4520842.56]
+      },
+      "properties": {
+        "name": "Remolins Library",
+        "type": "library",
+        "capacity": 200,
+        "municipality": "Tortosa"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [295581.79, 4509603.83]
+      },
+      "properties": {
+        "name": "Delta Health Center",
+        "type": "health_center",
+        "capacity": 180,
+        "municipality": "Amposta"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [393217.04, 4564406.1]
+      },
+      "properties": {
+        "name": "Ribes Roges Sports Center",
+        "type": "sports_center",
+        "capacity": 700,
+        "municipality": "Vilanova i la Geltrú"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [384710.02, 4603958.32]
+      },
+      "properties": {
+        "name": "Anoia School",
+        "type": "school",
+        "capacity": 420,
+        "municipality": "Igualada"
+      }
+    }
+  ]
+}
