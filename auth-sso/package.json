@@ -1,0 +1,36 @@
+{
+  "name": "auth-sso",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 5804",
+    "build": "next build",
+    "start": "next start --port 5804",
+    "api": "tsx src/exercises/jwt-validation-api/server.ts",
+    "token": "tsx src/exercises/jwt-validation-api/demo-token.ts",
+    "check": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "jose": "^6.2.18",
+    "next": "^16.4.6",
+    "openid-client": "^6.9.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "description": "Solved katas on single sign-on: OpenID Connect in Next.js and JWT validation in an API",
+  "engines": {
+    "node": ">=22.12"
+  }
+}
