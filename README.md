@@ -12,6 +12,7 @@ Coding katas, one self-contained folder per topic. Each kata has its own depende
 | [poc-to-production](poc-to-production/)       | Hardening a proof of concept for production (1 exercise)                                                         |
 | [postgres-rds](postgres-rds/)                 | PostgreSQL for RDS: schema design, safe migrations, least privilege, query performance and backups (5 exercises) |
 | [devops-infra](devops-infra/)                 | Production Dockerfile, Kubernetes, GitHub Actions to AWS, Git flow rules and Terraform (5 exercises)             |
+| [production-health](production-health/)       | Observability, load testing with k6 and incident response for a Node service (3 exercises)                       |
 
 ## Conventions
 
